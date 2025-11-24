@@ -45,13 +45,22 @@ public class StaffBookHeaderActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(StaffBookHeaderActivity.this, StaffBookDetailActivity.class);
+                Intent intent = new Intent(StaffBookHeaderActivity.this, StaffNoticeActivity.class);
                 startActivity(intent);
             }
         });
 
 
-
+        Button btn3 = findViewById(R.id.btnstaffnotice);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Intent intent = new Intent(StaffBookHeaderActivity.this, StaffBookHeaderActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 

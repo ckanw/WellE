@@ -11,19 +11,18 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class CustomerSpecialActivity extends AppCompatActivity {
+public class CustomerLoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.customer_sp_menu);
+        setContentView(R.layout.customer_login);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
 
         Button btn = findViewById(R.id.btnback);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -31,18 +30,20 @@ public class CustomerSpecialActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(CustomerSpecialActivity.this,CustomerMainActivity.class);
+                Intent intent = new Intent(CustomerLoginActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
 
-        Button btn4 = findViewById(R.id.btncustomernotice);
-        btn4.setOnClickListener(new View.OnClickListener() {
+
+
+        Button btn1 = findViewById(R.id.btncustomerok);
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(CustomerSpecialActivity.this, CustomerNoticeActivity.class);
+                Intent intent = new Intent(CustomerLoginActivity.this, CustomerMainActivity.class);
                 startActivity(intent);
             }
         });

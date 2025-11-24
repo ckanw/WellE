@@ -48,6 +48,19 @@ public class CustomerConfirmActivity extends AppCompatActivity{
             }
         });
 
+        Button btn4 = findViewById(R.id.btncustomernotice);
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Intent intent = new Intent(CustomerConfirmActivity.this, CustomerNoticeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
 
     }
 

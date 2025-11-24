@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(MainActivity.this, CustomerMainActivity.class);
+                Intent intent = new Intent(MainActivity.this, CustomerLoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
                startActivity(intent);
             }
         });
-
 
 
 

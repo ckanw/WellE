@@ -8,7 +8,7 @@
     android:animationCache="true"
     android:background="#000000"
     android:backgroundTint="#181616"
-    tools:context=".StaffLoginActivity">
+    tools:context=".CustomerLoginActivity">
 
     <ImageView
         android:id="@+id/imageBack"
@@ -41,73 +41,92 @@
         android:id="@+id/editTextText6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
+
         android:inputType="text"
-        android:text="Name"
+        android:textColor="#D5D5D5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toEndOf="@+id/txtStaffPwd"
-        app:layout_constraintTop_toBottomOf="@+id/edittxtStaffID" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txtCustomerPwd"
+        app:layout_constraintTop_toBottomOf="@+id/edittxtCukstomerEmail" />
 
     <TextView
-        android:id="@+id/txtStaffPwd"
+        android:id="@+id/txtCustomerEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="36dp"
-        android:text="Password:"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="104dp"
+        android:text="Email:"
+        android:textColor="#D5D5D5"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtStaffID" />
+        app:layout_constraintTop_toBottomOf="@+id/btnback" />
 
     <EditText
-        android:id="@+id/edittxtStaffID"
+        android:id="@+id/edittxtCukstomerEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="104dp"
         android:ems="10"
         android:inputType="text"
+        android:textColor="#D5D5D5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
-        app:layout_constraintStart_toEndOf="@+id/txtStaffID"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toEndOf="@+id/txtCustomerEmail"
         app:layout_constraintTop_toBottomOf="@+id/imageBack" />
+
+    <CheckBox
+        android:id="@+id/chkcustomerpwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Forget Passwords"
+        android:textColor="#D5D5D5"
+        app:layout_constraintTop_toBottomOf="@+id/txtCustomerPwd"
+        tools:layout_editor_absoluteX="76dp" />
 
     <TextView
-        android:id="@+id/txtStaffID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="112dp"
-        android:text="Staff ID:"
+        android:id="@+id/textView37"
+        android:layout_width="320dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="44dp"
+        android:text="If this is your first time logging in, the password you enter will be the default password."
+        app:layout_constraintTop_toBottomOf="@+id/chkcustomerpwd"
+        tools:layout_editor_absoluteX="87dp" />
+
+    <TextView
+        android:id="@+id/txtCustomerPwd"
+        android:layout_width="104dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="40dp"
+        android:text="Password:"
+        android:textColor="#D5D5D5"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageBack" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCustomerEmail" />
 
     <Button
-        android:id="@+id/btnstaffok"
+        android:id="@+id/btncustomerok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginStart="72dp"
         android:text="OK"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText6"
-        app:layout_constraintVertical_bias="0.02" />
+        app:layout_constraintTop_toBottomOf="@+id/textView37" />
 
     <Button
-        android:id="@+id/btnstaffcancel"
+        android:id="@+id/btncustomercancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
         android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.321"
-        app:layout_constraintStart_toEndOf="@+id/btnstaffok"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText6"
-        app:layout_constraintVertical_bias="0.02" />
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toEndOf="@+id/btncustomerok"
+        app:layout_constraintTop_toBottomOf="@+id/textView37" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,6 +28,10 @@
         </activity>
 
         <activity
+            android:name=".CustomerLoginActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".CustomerMainActivity"
             android:exported="false" />
 
@@ -51,6 +55,10 @@
         <activity
             android:name=".CustomerConfirmActivity"
             android:exported="false" />
+        <activity
+            android:name=".CustomerNoticeActivity"
+            android:exported="false" />
+
 
         <activity
             android:name=".StaffLoginActivity"
@@ -79,6 +87,10 @@
 
         <activity
             android:name=".StaffMenuDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StaffNoticeActivity"
             android:exported="false" />
 
     </application>

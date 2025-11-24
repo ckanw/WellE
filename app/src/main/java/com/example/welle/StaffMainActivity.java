@@ -46,7 +46,16 @@ public class StaffMainActivity extends AppCompatActivity {
             }
         });
 
-
+        Button btn3 = findViewById(R.id.btnstaffnotice);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Intent intent = new Intent(StaffMainActivity.this, StaffNoticeActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

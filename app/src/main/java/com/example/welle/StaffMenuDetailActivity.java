@@ -36,8 +36,27 @@ public class StaffMenuDetailActivity extends AppCompatActivity {
             }
         });
 
+        Button btn2 = findViewById(R.id.btnstaffconfirmmenu);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Intent intent = new Intent(StaffMenuDetailActivity.this, StaffMenuActivity.class);
+                startActivity(intent);
+            }
+        });
 
-
+        Button btn3 = findViewById(R.id.btnstaffnotice);
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Intent intent = new Intent(StaffMenuDetailActivity.this, StaffNoticeActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
