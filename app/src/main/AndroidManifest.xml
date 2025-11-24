@@ -52,6 +52,12 @@
             android:name=".StaffMainActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".StaffBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StaffMenuActivity"
+            android:exported="false" />
 
     </application>
 

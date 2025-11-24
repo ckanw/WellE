@@ -8,7 +8,8 @@
     android:animationCache="true"
     android:background="#000000"
     android:backgroundTint="#181616"
-    tools:context=".StaffLoginActivity">
+    tools:context=".StaffBookActivity">
+
 
     <ImageView
         android:id="@+id/imageBack"
@@ -37,6 +38,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.303" />
 
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="62dp"
@@ -50,77 +53,53 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
-    <TextView
-        android:id="@+id/txtStaffID"
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="64dp"
-        android:text="Staff ID:"
-        android:textSize="24sp"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="352dp"
+        android:layout_height="248dp"
+        android:layout_marginTop="12dp"
+        android:background="#ABABAB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <TextView
-        android:id="@+id/txtStaffPwd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:text="Password:"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtStaffID" />
-
-    <EditText
-        android:id="@+id/edittxtStaffID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:ems="10"
-        android:inputType="text"
+    <View
+        android:id="@+id/view7"
+        android:layout_width="352dp"
+        android:layout_height="187dp"
+        android:background="#ABABAB"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.323"
-        app:layout_constraintStart_toEndOf="@+id/txtStaffID"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+    <CalendarView
+        android:id="@+id/calendarView2"
+        android:layout_width="351dp"
+        android:layout_height="245dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <EditText
-        android:id="@+id/editTextText6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="353dp"
+        android:layout_height="185dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.37"
-        app:layout_constraintStart_toEndOf="@+id/txtStaffPwd"
-        app:layout_constraintTop_toBottomOf="@+id/edittxtStaffID" />
-
-    <Button
-        android:id="@+id/btnstaffok"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="212dp"
-        android:text="OK"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText6"
-        app:layout_constraintVertical_bias="0.02" />
-
-    <Button
-        android:id="@+id/btnstaffcancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
-        android:text="Cancel"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.321"
-        app:layout_constraintStart_toEndOf="@+id/btnstaffok"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText6"
-        app:layout_constraintVertical_bias="0.02" />
+        app:layout_constraintTop_toTopOf="@+id/view7"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/staff_book_header" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
