@@ -55,8 +55,8 @@ public class StaffLoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-            //    Intent intent = new Intent(StaffLoginActivity.this, MainActivity.class);
-         //       startActivity(intent);
+              Intent intent = new Intent(StaffLoginActivity.this, StaffMainActivity.class);
+               startActivity(intent);
           }
         });
 

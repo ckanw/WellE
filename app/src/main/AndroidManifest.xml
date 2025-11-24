@@ -48,6 +48,10 @@
             android:name=".StaffLoginActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".StaffMainActivity"
+            android:exported="false" />
+
 
     </application>
 
