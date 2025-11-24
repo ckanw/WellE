@@ -48,6 +48,17 @@ public class CustomerMainActivity extends AppCompatActivity{
             }
         });
 
+        Button btn3  = findViewById(R.id.btnmenu);
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Intent intent = new Intent(CustomerMainActivity.this, CustomerMenuActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

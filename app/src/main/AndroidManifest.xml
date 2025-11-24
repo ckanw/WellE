@@ -32,6 +32,11 @@
             android:exported="false" />
 
         <activity
+            android:name=".CustomerMenuActivity"
+            android:exported="false" />
+
+
+        <activity
             android:name=".CustomerBookActivity"
             android:exported="false" />
 
