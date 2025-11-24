@@ -34,6 +34,9 @@
         <activity
             android:name=".CustomerMenuActivity"
             android:exported="false" />
+        <activity
+            android:name=".CustomerSpecialActivity"
+            android:exported="false" />
 
 
         <activity
@@ -57,11 +60,25 @@
             android:name=".StaffMainActivity"
             android:exported="false" />
 
+
         <activity
             android:name=".StaffBookActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".StaffBookHeaderActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StaffBookDetailActivity"
+            android:exported="false" />
+
         <activity
             android:name=".StaffMenuActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StaffMenuDetailActivity"
             android:exported="false" />
 
     </application>

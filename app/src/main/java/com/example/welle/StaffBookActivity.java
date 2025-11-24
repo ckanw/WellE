@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class StaffBookActivity extends AppCompatActivity {
 
@@ -41,6 +40,18 @@ public class StaffBookActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btn2 = findViewById(R.id.btnstaffbkdate);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Intent intent = new Intent(StaffBookActivity.this, StaffBookHeaderActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 

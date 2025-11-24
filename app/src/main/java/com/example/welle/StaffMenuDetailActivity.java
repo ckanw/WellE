@@ -11,13 +11,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class StaffMenuActivity extends AppCompatActivity {
+public class StaffMenuDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.staff_menu);
+        setContentView(R.layout.staff_menu_detail);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -31,21 +31,11 @@ public class StaffMenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(StaffMenuActivity.this, StaffMainActivity.class);
+                Intent intent = new Intent(StaffMenuDetailActivity.this, StaffMenuActivity.class);
                 startActivity(intent);
             }
         });
 
-        Button btn2 = findViewById(R.id.btnstaffeditmenu);
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Explicit Intent
-                //goToSecondActivity();
-                Intent intent = new Intent(StaffMenuActivity.this, StaffMenuDetailActivity.class);
-                startActivity(intent);
-            }
-        });
 
 
 

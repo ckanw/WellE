@@ -11,41 +11,52 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class StaffMenuActivity extends AppCompatActivity {
+public class StaffBookDetailActivity extends AppCompatActivity {
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.staff_menu);
+        setContentView(R.layout.staff_book_detail);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-
-        Button btn = findViewById(R.id.btnback);
+        Button btn = findViewById(R.id.btnstaffconfirmbk);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(StaffMenuActivity.this, StaffMainActivity.class);
+                Intent intent = new Intent(StaffBookDetailActivity.this, StaffBookActivity.class);
                 startActivity(intent);
             }
         });
 
-        Button btn2 = findViewById(R.id.btnstaffeditmenu);
+
+
+        Button btn2 = findViewById(R.id.btnback);
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(StaffMenuActivity.this, StaffMenuDetailActivity.class);
+                Intent intent = new Intent(StaffBookDetailActivity.this, StaffBookHeaderActivity.class);
                 startActivity(intent);
             }
         });
+
+
+
+
+
+
 
 
 

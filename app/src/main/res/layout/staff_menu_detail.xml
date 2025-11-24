@@ -8,7 +8,7 @@
     android:animationCache="true"
     android:background="#000000"
     android:backgroundTint="#181616"
-    tools:context=".StaffMenuActivity">
+    tools:context=".StaffMenuDetailActivity">
 
     <ImageView
         android:id="@+id/imageBack"
@@ -59,145 +59,167 @@
         android:layout_height="wrap_content" />
 
     <View
-        android:id="@+id/view4"
+        android:id="@+id/view6"
         android:layout_width="416dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="44dp"
+        android:layout_height="262dp"
+        android:background="#4E4E4E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view8"
+        app:layout_constraintVertical_bias="0.366"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="412dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
         android:background="#4E4E4E"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:layout_editor_absoluteX="-2dp" />
 
     <TextView
-        android:id="@+id/textView13"
-        android:layout_width="113dp"
-        android:layout_height="61dp"
-        android:text="Lunch"
-        android:textColor="#D5D5D5"
-        android:textSize="20sp"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintStart_toStartOf="@+id/view4"
-        app:layout_constraintTop_toTopOf="@+id/view4" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="113dp"
-        android:layout_height="61dp"
-        android:text="Dinner"
-        android:textColor="#D5D5D5"
-        android:textSize="20sp"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toTopOf="@+id/view4" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="113dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="17dp"
-        android:text="A la carte"
-        android:textColor="#D5D5D5"
-        android:textSize="20sp"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toTopOf="@+id/textView14" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="113dp"
-        android:layout_height="61dp"
-        android:text="Drink"
-        android:textColor="#D5D5D5"
-        android:textSize="20sp"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toTopOf="@+id/textView14" />
-
-    <View
-        android:id="@+id/view6"
-        android:layout_width="416dp"
-        android:layout_height="345dp"
-        android:layout_marginTop="48dp"
-        android:background="#4E4E4E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="-2dp" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="121dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
         android:text="Set A"
         android:textColor="#D5D5D5"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view6" />
+        app:layout_constraintTop_toTopOf="@+id/view8" />
 
     <TextView
-        android:id="@+id/textView20"
-        android:layout_width="121dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="20dp"
-        android:text="Set B"
-        android:textColor="#D5D5D5"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView21"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="121dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="20dp"
-        android:text="Set C"
-        android:textColor="#D5D5D5"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView20"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/textView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="20dp"
         android:text="$XXX.XX"
         android:textColor="#D5D5D5"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/view6"
-        app:layout_constraintHorizontal_bias="0.095"
-        app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toTopOf="@+id/view6" />
+        app:layout_constraintEnd_toEndOf="@+id/view8"
+        app:layout_constraintHorizontal_bias="0.957"
+        app:layout_constraintStart_toEndOf="@+id/textView33"
+        app:layout_constraintTop_toTopOf="@+id/view8" />
 
-    <TextView
-        android:id="@+id/textView17"
+    <Button
+        android:id="@+id/btnstaffconfirmmenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="20dp"
-        android:text="$XXX.XX"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="24dp"
+        android:text="Confirm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+    <Button
+        android:id="@+id/btnstaffcancelmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnstaffconfirmmenu"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="XXX"
         android:textColor="#D5D5D5"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toEndOf="@+id/textView45"
+        app:layout_constraintTop_toBottomOf="@+id/view8" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/textView36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="12dp"
-        android:text="$XXX.XX"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:text="XXX"
         android:textColor="#D5D5D5"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/view6"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView19"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="XXX"
+        android:textColor="#D5D5D5"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView39"
+        app:layout_constraintTop_toTopOf="@+id/view6" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="XXX"
+        android:textColor="#D5D5D5"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toTopOf="@+id/view6" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="XXX"
+        android:textColor="#D5D5D5"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView44"
+        app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="XXX"
+        android:textColor="#D5D5D5"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView38"
+        app:layout_constraintTop_toTopOf="@+id/view6" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="XXX"
+        android:textColor="#D5D5D5"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:text="XXX"
+        android:textColor="#D5D5D5"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView36"
+        app:layout_constraintTop_toBottomOf="@+id/view8" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
