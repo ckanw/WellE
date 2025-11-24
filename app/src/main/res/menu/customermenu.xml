@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Main"
+        android:id="@+id/customermainch"/>
+    <item android:title="Booking"
+        android:id="@+id/customerbookch"/>
+    <item android:title="Menu"
+        android:id="@+id/customermenuch"/>
+    <item android:title="Notice"
+        android:id="@+id/customernoticeuch"/>
+    <item android:title="Preference"
+        android:id="@+id/customerpreferencech"/>
+    <item android:title="Help"
+        android:id="@+id/customerhelpch"/>
+    <item android:title="Sign out"
+        android:id="@+id/customersignoutch"/>
+
+</menu>

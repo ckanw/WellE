@@ -2,18 +2,22 @@ package com.example.welle;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.PopupMenu;
+import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
+
+
 public class StaffBookActivity extends AppCompatActivity {
-
-
 
 
     @Override
@@ -29,8 +33,12 @@ public class StaffBookActivity extends AppCompatActivity {
         });
 
 
-
         Button btn = findViewById(R.id.btnback);
+        Button btn2 = findViewById(R.id.btnstaffbkdate);
+        Button btn3 = findViewById(R.id.btnstaffnotice);
+        Button popupButton = findViewById(R.id.btnstaffullmenu);
+
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +49,7 @@ public class StaffBookActivity extends AppCompatActivity {
             }
         });
 
-        Button btn2 = findViewById(R.id.btnstaffbkdate);
+
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +60,7 @@ public class StaffBookActivity extends AppCompatActivity {
             }
         });
 
-        Button btn3 = findViewById(R.id.btnstaffnotice);
+
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,11 +72,40 @@ public class StaffBookActivity extends AppCompatActivity {
         });
 
 
+        popupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popup = new PopupMenu(StaffBookActivity.this, v);
 
+                MenuInflater inflater = popup.getMenuInflater();
 
-
-
-
-
+                inflater.inflate(R.menu.staffmenu, popup.getMenu());
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        if (item.getItemId() == R.id.staffmainch) {
+                            Intent intent = new Intent(StaffBookActivity.this, StaffMainActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.staffnoticech) {
+                            Intent intent = new Intent(StaffBookActivity.this, StaffNoticeActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.staffbookch) {
+                            Intent intent = new Intent(StaffBookActivity.this, StaffBookActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.staffmenuch) {
+                            Intent intent = new Intent(StaffBookActivity.this, StaffMenuActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.staffhelpch) {
+                            Toast.makeText(StaffBookActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
+                        } else if (item.getItemId() == R.id.staffsignoutch) {
+                            Intent intent = new Intent(StaffBookActivity.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                        return true;
+                    }
+                });
+                popup.show();
+            }
+        });
     }
 }

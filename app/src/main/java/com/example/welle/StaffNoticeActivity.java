@@ -2,8 +2,12 @@ package com.example.welle;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +30,8 @@ public class StaffNoticeActivity extends AppCompatActivity {
 
 
         Button btn = findViewById(R.id.btnback);
+        Button popupButton = findViewById(R.id.btnstaffullmenu);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +42,41 @@ public class StaffNoticeActivity extends AppCompatActivity {
             }
         });
 
+        popupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popup = new PopupMenu(StaffNoticeActivity.this, v);
+
+                MenuInflater inflater = popup.getMenuInflater();
+
+                inflater.inflate(R.menu.staffmenu, popup.getMenu());
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        if (item.getItemId() == R.id.staffmainch) {
+                            Intent intent = new Intent(StaffNoticeActivity.this, StaffMainActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.staffnoticech) {
+                            Intent intent = new Intent(StaffNoticeActivity.this, StaffNoticeActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.staffbookch) {
+                            Intent intent = new Intent(StaffNoticeActivity.this, StaffBookActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.staffmenuch) {
+                            Intent intent = new Intent(StaffNoticeActivity.this, StaffMenuActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.staffhelpch) {
+                            Toast.makeText(StaffNoticeActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
+                        } else if (item.getItemId() == R.id.staffsignoutch) {
+                            Intent intent = new Intent(StaffNoticeActivity.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                        return true;
+                    }
+                });
+                popup.show();
+            }
+        });
 
 
 

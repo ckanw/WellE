@@ -2,8 +2,12 @@ package com.example.welle;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +30,9 @@ public class CustomerSpecialActivity extends AppCompatActivity {
 
 
         Button btn = findViewById(R.id.btnback);
+        Button btn4 = findViewById(R.id.btncustomernotice);
+        Button popupButton = findViewById(R.id.btncustomerfullmenu);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +43,6 @@ public class CustomerSpecialActivity extends AppCompatActivity {
             }
         });
 
-        Button btn4 = findViewById(R.id.btncustomernotice);
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +53,43 @@ public class CustomerSpecialActivity extends AppCompatActivity {
             }
         });
 
+        popupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popup = new PopupMenu(CustomerSpecialActivity.this, v);
 
+                MenuInflater inflater = popup.getMenuInflater();
+
+                inflater.inflate(R.menu.customermenu, popup.getMenu());
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        if (item.getItemId() == R.id.customermainch) {
+                            Intent intent = new Intent(CustomerSpecialActivity.this, CustomerMainActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.customerbookch) {
+                            Intent intent = new Intent(CustomerSpecialActivity.this, CustomerBookActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.customermenuch) {
+                            Intent intent = new Intent(CustomerSpecialActivity.this, CustomerMenuActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.customernoticeuch) {
+                            Intent intent = new Intent(CustomerSpecialActivity.this, CustomerNoticeActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.customerpreferencech) {
+                            Toast.makeText(CustomerSpecialActivity.this, "This function will be coming to you!", Toast.LENGTH_SHORT).show();
+                        } else if (item.getItemId() == R.id.customerhelpch) {
+                            Toast.makeText(CustomerSpecialActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
+                        } else if (item.getItemId() == R.id.customersignoutch) {
+                            Intent intent = new Intent(CustomerSpecialActivity.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                        return true;
+                    }
+                });
+                popup.show();
+            }
+        });
 
 
     }
