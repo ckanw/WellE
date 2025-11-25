@@ -39,6 +39,7 @@ public class StaffBookDetailActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
+                Toast.makeText(StaffBookDetailActivity.this, "Record is update", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(StaffBookDetailActivity.this, StaffBookActivity.class);
                 startActivity(intent);
             }

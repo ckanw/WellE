@@ -146,14 +146,10 @@
 
     <FrameLayout
         android:id="@+id/StaffFrame"
-        android:layout_width="420dp"
-        android:layout_height="346dp"
-        android:layout_marginBottom="49dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnstaffconfirmmenu"
+        android:layout_width="415dp"
+        android:layout_height="252dp"
         app:layout_constraintTop_toBottomOf="@+id/button5"
-        tools:layout_editor_absoluteX="-5dp">
-
-    </FrameLayout>
+        tools:layout_editor_absoluteX="-5dp" />
 
     <Button
         android:id="@+id/button5"
@@ -220,6 +216,53 @@
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/textView38"
         app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+    <View
+        android:id="@+id/view12"
+        android:layout_width="390dp"
+        android:layout_height="75dp"
+        android:background="#4E4E4E"
+        app:layout_constraintBottom_toTopOf="@+id/btnstaffconfirmmenu"
+        app:layout_constraintTop_toBottomOf="@+id/StaffFrame"
+        app:layout_constraintVertical_bias="0.619"
+        tools:layout_editor_absoluteX="15dp" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="113dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textColor="#A5A5A5"
+        android:text="Dessert"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView45"
+        app:layout_constraintTop_toTopOf="@+id/view12" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="113dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textColor="#A5A5A5"
+        android:text="Starter + "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/view12"
+        app:layout_constraintTop_toTopOf="@+id/view12" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="113dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textColor="#A5A5A5"
+        android:text="Main + "
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView44"
+        app:layout_constraintTop_toTopOf="@+id/view12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

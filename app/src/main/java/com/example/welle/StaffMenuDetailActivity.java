@@ -17,11 +17,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class StaffMenuDetailActivity extends AppCompatActivity {
 
@@ -85,8 +82,9 @@ public class StaffMenuDetailActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(StaffMenuDetailActivity.this, StaffMenuActivity.class);
-                startActivity(intent);
+
+               Intent intent = new Intent(StaffMenuDetailActivity.this, StaffMenuActivity.class);
+               startActivity(intent);
             }
         });
 
