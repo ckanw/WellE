@@ -86,22 +86,28 @@
         app:layout_constraintStart_toEndOf="@+id/textView33"
         app:layout_constraintTop_toTopOf="@+id/view8" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnstaffcancelmenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toEndOf="@+id/btnstaffconfirmmenu" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnstaffconfirmmenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="Confirm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

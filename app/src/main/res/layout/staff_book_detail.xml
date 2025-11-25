@@ -201,12 +201,15 @@
         app:layout_constraintTop_toBottomOf="@+id/button3"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btncancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="116dp"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -215,52 +218,67 @@
         app:layout_constraintTop_toBottomOf="@+id/button3"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/button2"
         android:layout_width="181dp"
         android:layout_height="55dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="Friends gathering"
         app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
+        android:background="@drawable/shape_capsule2"
         android:text="Business dinner"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="Brithday"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="Dating"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnstaffnotice"
         android:layout_width="83dp"
         android:layout_height="59dp"
         android:text="btnstaffnotice"
         android:alpha="0"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -276,11 +294,14 @@
         app:srcCompat="@drawable/burger_menu"
         tools:layout_editor_absoluteY="0dp" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnstaffullmenu"
         android:layout_width="61dp"
         android:layout_height="60dp"
         android:alpha="0"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="btnstaffullmenu"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.059"

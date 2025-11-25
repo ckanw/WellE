@@ -83,30 +83,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageBack" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnstaffok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="212dp"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="OK"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText6"
-        app:layout_constraintVertical_bias="0.02" />
+        app:layout_constraintVertical_bias="0.008" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnstaffcancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="212dp"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toEndOf="@+id/btnstaffok"
         app:layout_constraintTop_toBottomOf="@+id/editTextText6"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.016" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

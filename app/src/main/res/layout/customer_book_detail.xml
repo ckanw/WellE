@@ -145,23 +145,29 @@
         app:layout_constraintStart_toEndOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnconfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="Confirm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btncancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -198,14 +204,14 @@
 
     <android.widget.Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="118dp"
+        android:layout_height="43dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/shape_capsule2"
+        android:text="Business dinner"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:text="Business dinner"
         app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 

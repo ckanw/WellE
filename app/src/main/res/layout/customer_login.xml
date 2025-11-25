@@ -108,20 +108,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCustomerEmail" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btncustomerok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="OK"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView37" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btncustomercancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

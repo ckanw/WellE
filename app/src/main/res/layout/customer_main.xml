@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/btnbook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,6 +29,9 @@
         android:layout_marginTop="150dp"
         android:layout_marginEnd="211dp"
         android:layout_marginBottom="475dp"
+        android:background="@drawable/shape_capsule2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
         android:text="Booking"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
