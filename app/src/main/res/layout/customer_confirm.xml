@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animationCache="true"
-    android:background="#000000"
+    android:background="@drawable/jpeg__5_"
     tools:context=".CustomerConfirmActivity">
 
 
@@ -52,6 +52,7 @@
         android:layout_height="172dp"
         android:layout_marginTop="72dp"
         android:text="Booking is confirm!!"
+        android:textColor="#A5A5A5"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,8 +73,8 @@
         android:id="@+id/btncustomernotice"
         android:layout_width="83dp"
         android:layout_height="59dp"
-        android:text="btncustomernotice"
         android:alpha="0"
+        android:text="btncustomernotice"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"

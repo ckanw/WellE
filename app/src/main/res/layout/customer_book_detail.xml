@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animationCache="true"
-    android:background="#000000"
+    android:background="@drawable/jpeg__5_"
     tools:context=".CustomerBookActivity">
 
 
@@ -52,6 +52,7 @@
         android:layout_height="44dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="44dp"
+        android:textColor="#A5A5A5"
         android:text="2025-12-04"
         android:textAlignment="center"
         android:textSize="30dp"
@@ -63,6 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
+        android:textColor="#A5A5A5"
         android:text="19:00 - 20:00"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +79,7 @@
         android:ems="10"
         android:inputType="text"
         android:text="12345678"
-        android:textColor="#6B5858"
+        android:textColor="#A5A5A5"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
@@ -90,7 +92,7 @@
         android:ems="10"
         android:inputType="text"
         android:text="Ken Wong"
-        android:textColor="#6B5858"
+        android:textColor="#A5A5A5"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/txttime" />
 
@@ -99,6 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:textColor="#A5A5A5"
         android:text="Email :"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.146"
@@ -110,6 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:textColor="#A5A5A5"
         android:text="Tel:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
@@ -122,6 +126,7 @@
         android:layout_height="33dp"
         android:layout_marginTop="16dp"
         android:text="Number of Person:"
+        android:textColor="#A5A5A5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
@@ -136,7 +141,7 @@
         android:ems="10"
         android:inputType="text"
         android:text="XXXX@XXX.com"
-        android:textColor="#6B5858"
+        android:textColor="#A5A5A5"
         app:layout_constraintStart_toEndOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 
@@ -169,11 +174,12 @@
         android:id="@+id/textView9"
         android:layout_width="116dp"
         android:layout_height="46dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="64dp"
+        android:textColor="#A5A5A5"
         android:text="Remark: "
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.081"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -225,6 +231,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Name: "
+        android:textColor="#A5A5A5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent"
@@ -238,6 +245,7 @@
         android:ems="10"
         android:inputType="text"
         android:text="Name"
+        android:textColor="#A5A5A5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.786"
         app:layout_constraintStart_toStartOf="parent"
@@ -247,8 +255,8 @@
         android:id="@+id/btncustomernotice"
         android:layout_width="83dp"
         android:layout_height="59dp"
-        android:text="btncustomernotice"
         android:alpha="0"
+        android:text="btncustomernotice"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"

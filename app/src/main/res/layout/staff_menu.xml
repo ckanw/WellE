@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animationCache="true"
-    android:background="#000000"
-    android:backgroundTint="#181616"
+    android:background="@drawable/jpeg__5_"
     tools:context=".StaffMenuActivity">
+
 
     <Button
         android:id="@+id/btnback"
@@ -32,7 +32,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView12"
         app:srcCompat="@android:drawable/ic_menu_revert" />
-
 
 
     <ImageView
@@ -64,9 +63,38 @@
         tools:layout_editor_absoluteX="-2dp" />
 
     <TextView
+        android:id="@+id/textView41"
+        android:layout_width="113dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="Dinner"
+        android:textColor="#D5D5D5"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="113dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="A la carte"
+        android:textColor="#D5D5D5"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintStart_toEndOf="@+id/textView41"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <TextView
         android:id="@+id/textView13"
         android:layout_width="113dp"
         android:layout_height="61dp"
+        android:gravity="center"
         android:text="Lunch"
         android:textColor="#D5D5D5"
         android:textSize="20sp"
@@ -75,38 +103,16 @@
         app:layout_constraintTop_toTopOf="@+id/view4" />
 
     <TextView
-        android:id="@+id/textView14"
-        android:layout_width="113dp"
-        android:layout_height="61dp"
-        android:text="Dinner"
-        android:textColor="#D5D5D5"
-        android:textSize="20sp"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toTopOf="@+id/view4" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="113dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="17dp"
-        android:text="A la carte"
-        android:textColor="#D5D5D5"
-        android:textSize="20sp"
-        app:autoSizeTextType="uniform"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toTopOf="@+id/textView14" />
-
-    <TextView
         android:id="@+id/textView16"
         android:layout_width="113dp"
         android:layout_height="61dp"
+        android:gravity="center"
         android:text="Drink"
         android:textColor="#D5D5D5"
         android:textSize="20sp"
         app:autoSizeTextType="uniform"
-        app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toTopOf="@+id/textView14" />
+        app:layout_constraintStart_toEndOf="@+id/textView43"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
 
     <View
         android:id="@+id/view6"
@@ -121,10 +127,10 @@
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="121dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="117dp"
+        android:layout_height="34dp"
         android:layout_marginTop="32dp"
+        android:gravity="center"
         android:text="Set A"
         android:textColor="#D5D5D5"
         android:textSize="20sp"
@@ -136,34 +142,36 @@
         android:layout_width="121dp"
         android:layout_height="33dp"
         android:layout_marginTop="20dp"
+        android:gravity="center"
         android:text="Set B"
         android:textColor="#D5D5D5"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView21"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="121dp"
         android:layout_height="33dp"
         android:layout_marginTop="20dp"
+        android:gravity="center"
         android:text="Set C"
         android:textColor="#D5D5D5"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView20"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <TextView
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="176dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="36dp"
         android:text="$XXX.XX"
         android:textColor="#D5D5D5"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/view6"
-        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintHorizontal_bias="0.097"
         app:layout_constraintStart_toEndOf="@+id/textView21"
         app:layout_constraintTop_toTopOf="@+id/view6" />
 
@@ -186,7 +194,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="180dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="28dp"
         android:text="$XXX.XX"
         android:textColor="#D5D5D5"
         android:textSize="20sp"
@@ -197,21 +205,23 @@
 
     <Button
         android:id="@+id/btnstaffeditmenu"
-        android:layout_width="428dp"
-        android:layout_height="324dp"
-        android:text="btnstaffeditmenu"
+        android:layout_width="422dp"
+        android:layout_height="346dp"
         android:alpha="0"
+        android:text="btnstaffeditmenu"
         app:layout_constraintBottom_toBottomOf="@+id/view6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view6" />
+        app:layout_constraintTop_toTopOf="@+id/view6"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnstaffnotice"
         android:layout_width="83dp"
         android:layout_height="59dp"
-        android:text="btnstaffnotice"
         android:alpha="0"
+        android:text="btnstaffnotice"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"

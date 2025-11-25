@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,12 +13,12 @@ import java.util.List;
 
 
 // Model class for the data to be displayed in each item
-class Item {
+class staffItem {
 
     String title;    // Title text
     String subtitle; // Subtitle text
 
-    Item(String title, String subtitle) {
+    staffItem(String title, String subtitle) {
 
         this.title = title;
         this.subtitle = subtitle;
@@ -27,13 +26,13 @@ class Item {
 }
 
 
-public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder> {
+public class StaffNoticeAdapter extends RecyclerView.Adapter<StaffNoticeAdapter.ItemViewHolder> {
 
     private Context context;
     private List<staffItem> itemList;
 
 
-    public ItemAdapter(Context context, List<staffItem> itemList) {
+    public StaffNoticeAdapter(Context context, List<staffItem> itemList) {
         this.context = context;
         this.itemList = itemList;
     }
@@ -42,7 +41,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     @NonNull
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.customer_notice_layout, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.staff_notice_layout, parent, false);
         return new ItemViewHolder(view);
     }
 

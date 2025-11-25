@@ -14,8 +14,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class StaffNoticeActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private StaffNoticeAdapter adapter;
+    private List<staffItem> itemList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +40,13 @@ public class StaffNoticeActivity extends AppCompatActivity {
 
         Button btn = findViewById(R.id.btnback);
         Button popupButton = findViewById(R.id.btnstaffullmenu);
+
+        recyclerView = findViewById(R.id.StaffRecyclerView);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
+        itemList = new ArrayList<>();
+        loadData();
+        adapter = new StaffNoticeAdapter(this, itemList);
+        recyclerView.setAdapter(adapter);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,9 +93,16 @@ public class StaffNoticeActivity extends AppCompatActivity {
                 popup.show();
             }
         });
-
-
-
-
     }
+
+    private void loadData() {
+        // Sample data for testing
+        itemList.add(new staffItem("12:00", "Miss Cheung - She boss will put the wine to shop for tonight"));
+        itemList.add(new staffItem("13:00", "Mr Ko - Brithday"));
+        itemList.add(new staffItem("13:00", "Vivian Chiu - Friend Gathering"));
+        itemList.add(new staffItem("18:00", "Sammi Hui - Friend Gathering"));
+        itemList.add(new staffItem( "19:00", "Mrs. Lee - Company Party"));
+        itemList.add(new staffItem( "20:30", "Jacky Cheung - Anniversary"));
+    }
+
 }

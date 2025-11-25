@@ -24,7 +24,7 @@ public class CustomerNoticeActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ItemAdapter adapter;
-    private List<Item> itemList;
+    private List<staffItem> itemList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,11 +114,11 @@ public class CustomerNoticeActivity extends AppCompatActivity {
     }
     private void loadData() {
         // Sample data for testing
-        itemList.add(new Item( R.drawable.ic_launcher_background,"2025-02-14", "Valentine's Day"));
-        itemList.add(new Item( R.drawable.ic_launcher_background,"2025-07-14", "Chinese Ghost Festival"));
-        itemList.add(new Item( R.drawable.ic_launcher_background,"2025-07-16", "Birthday"));
-        itemList.add(new Item( R.drawable.ic_launcher_background,"2025-10-31", "Halloween"));
-        itemList.add(new Item( R.drawable.ic_launcher_background,"2025-12-14", "Have a get-together"));
+        itemList.add(new staffItem( "2025-02-14", "Valentine's Day"));
+        itemList.add(new staffItem( "2025-07-14", "Chinese Ghost Festival"));
+        itemList.add(new staffItem( "2025-07-16", "Birthday"));
+        itemList.add(new staffItem( "2025-10-31", "Halloween"));
+        itemList.add(new staffItem( "2025-12-14", "Have a get-together"));
     }
 
 }

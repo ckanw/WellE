@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animationCache="true"
-    android:background="#000000"
-    android:backgroundTint="#181616"
+    android:background="@drawable/jpeg__5_"
     tools:context=".CustomerSpecialActivity">
 
     <Button
@@ -32,7 +31,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView12"
         app:srcCompat="@android:drawable/ic_menu_revert" />
-
 
 
     <ImageView
@@ -170,8 +168,8 @@
         android:id="@+id/btncustomernotice"
         android:layout_width="83dp"
         android:layout_height="59dp"
-        android:text="btncustomernotice"
         android:alpha="0"
+        android:text="btncustomernotice"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"

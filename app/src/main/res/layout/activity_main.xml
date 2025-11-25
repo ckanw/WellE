@@ -6,12 +6,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animationCache="true"
-    android:background="#000000"
-    android:backgroundTint="#181616"
+    android:background="@drawable/jpeg__4_"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textVersion"
+        android:layout_width="39dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="50dp"
+        android:text="V 1.0"
+        android:textColor="#ED878585"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+
+    <TextView
+        android:id="@+id/textView35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:allowUndo="false"
@@ -20,7 +36,7 @@
         android:ellipsize="none"
         android:fontFamily="cursive"
         android:text="Well-E"
-        android:textColor="#FF9800"
+        android:textColor="#020202"
         android:textSize="96sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,19 +71,23 @@
         app:layout_constraintVertical_bias="0.472" />
 
     <TextView
-        android:id="@+id/textVersion"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="334dp"
-        android:layout_marginTop="662dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="50dp"
-        android:text="V 1.0"
-        android:textColor="#ED878585"
+        android:allowUndo="false"
+        android:breakStrategy="high_quality"
+        android:bufferType="normal"
+        android:ellipsize="none"
+        android:fontFamily="cursive"
+        android:text="Well-E"
+        android:textColor="#FF9800"
+        android:textSize="96sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.349" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

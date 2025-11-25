@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animationCache="true"
-    android:background="#000000"
-    android:backgroundTint="#181616"
+    android:background="@drawable/jpeg__5_"
     tools:context=".StaffMainActivity">
 
     <ImageView
@@ -56,7 +55,7 @@
         android:background="#666060"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintHorizontal_bias="0.787"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.086" />
@@ -70,10 +69,11 @@
         app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.086"
+        app:layout_constraintVertical_bias="0.087"
         app:srcCompat="@drawable/staffmenu" />
 
-    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <ImageView
@@ -82,8 +82,8 @@
         android:layout_height="153dp"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.867"
-        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/staffcalendar" />
@@ -92,34 +92,36 @@
         android:id="@+id/btnstaffbook"
         android:layout_width="111dp"
         android:layout_height="107dp"
-        android:text="Button"
         android:alpha="0"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.907"
-        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toEndOf="@+id/view2"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.078" />
+        app:layout_constraintVertical_bias="0.083" />
+
+    4
 
     <Button
         android:id="@+id/btnstaffallmenu"
         android:layout_width="105dp"
         android:layout_height="105dp"
-        android:text="BtnMeun"
         android:alpha="0"
+        android:text="BtnMeun"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.121" />4
+        app:layout_constraintVertical_bias="0.095" />
 
     <Button
         android:id="@+id/btnstaffnotice"
         android:layout_width="83dp"
         android:layout_height="59dp"
-        android:text="btnstaffnotice"
         android:alpha="0"
+        android:text="btnstaffnotice"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"

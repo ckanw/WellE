@@ -14,8 +14,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class StaffMenuDetailActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +42,14 @@ public class StaffMenuDetailActivity extends AppCompatActivity {
         Button btn = findViewById(R.id.btnback);
         Button btn2 = findViewById(R.id.btnstaffconfirmmenu);
         Button btn3 = findViewById(R.id.btnstaffnotice);
+        Button btn5 = findViewById(R.id.button5);
+        Button btn6 = findViewById(R.id.button6);
+        Button btn7 = findViewById(R.id.button7);
         Button popupButton = findViewById(R.id.btnstaffullmenu);
+
+
+
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +61,24 @@ public class StaffMenuDetailActivity extends AppCompatActivity {
             }
         });
 
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(new ItemFragment01());
+            }
+        });
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(new ItemFragment02());
+            }
+        });
+        btn7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(new ItemFragment03());
+            }
+        });
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,8 +136,21 @@ public class StaffMenuDetailActivity extends AppCompatActivity {
                 popup.show();
             }
         });
-
-
-
     }
+
+    public void loadFragment(Fragment fragment){
+        // responsible for all runtime management of fragments
+        // including adding, removing, hiding, showing
+        // and navigating between fragments
+        FragmentManager fm = getSupportFragmentManager();
+
+        FragmentTransaction ft = fm.beginTransaction();
+
+        // Replace the framelayout with new fragment
+        ft.replace(R.id.StaffFrame, fragment);
+        ft.commit();
+    }
+
+
 }
+
