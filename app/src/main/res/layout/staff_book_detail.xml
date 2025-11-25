@@ -221,13 +221,13 @@
     <android.widget.Button
         android:id="@+id/button2"
         android:layout_width="181dp"
-        android:layout_height="55dp"
+        android:layout_height="49dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/shape_capsule2"
+        android:text="Friends gathering"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:text="Friends gathering"
         app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -235,7 +235,7 @@
         android:id="@+id/button4"
         android:layout_width="128dp"
         android:layout_height="48dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/shape_capsule2"
         android:text="Business dinner"
