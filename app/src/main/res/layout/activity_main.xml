@@ -9,22 +9,21 @@
     android:background="@drawable/jpeg__4_"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/textVersion"
-        android:layout_width="39dp"
-        android:layout_height="12dp"
+        android:layout_width="52dp"
+        android:layout_height="23dp"
         android:layout_marginEnd="19dp"
-        android:layout_marginBottom="50dp"
         android:text="V 1.0"
+        android:textAlignment="center"
         android:textColor="#ED878585"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-
+        app:layout_constraintVertical_bias="0.977" />
 
     <TextView
         android:id="@+id/textView35"
@@ -85,7 +84,7 @@
         android:bufferType="normal"
         android:ellipsize="none"
         android:fontFamily="cursive"
-        android:text="Well-E"
+        android:text="WELL-E"
         android:textColor="#FF9800"
         android:textSize="96sp"
         app:layout_constraintBottom_toBottomOf="parent"

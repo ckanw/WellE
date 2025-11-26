@@ -191,8 +191,8 @@
 
     <android.widget.Button
         android:id="@+id/button2"
-        android:layout_width="132dp"
-        android:layout_height="49dp"
+        android:layout_width="131dp"
+        android:layout_height="45dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/shape_capsule2"
@@ -231,15 +231,15 @@
 
     <android.widget.Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="88dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/shape_capsule2"
+        android:text="Dating"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:text="Dating"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
