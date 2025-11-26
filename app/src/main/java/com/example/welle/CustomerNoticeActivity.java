@@ -52,6 +52,8 @@ public class CustomerNoticeActivity extends AppCompatActivity {
 
 
         Button btn = findViewById(R.id.btnback);
+        Button btn2 = findViewById(R.id.button8);
+
         Button popupButton = findViewById(R.id.btncustomerfullmenu);
 
         // Initialize RecyclerView
@@ -65,6 +67,16 @@ public class CustomerNoticeActivity extends AppCompatActivity {
                 // Explicit Intent
                 //goToSecondActivity();
                 Intent intent = new Intent(CustomerNoticeActivity.this, CustomerMainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Intent intent = new Intent(CustomerNoticeActivity.this, CustomerBookEditActivity.class);
                 startActivity(intent);
             }
         });

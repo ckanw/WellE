@@ -58,7 +58,15 @@
         <activity
             android:name=".CustomerNoticeActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".CustomerBookEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerBookCancelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerBookCanceledActivity"
+            android:exported="false" />
 
         <activity
             android:name=".StaffLoginActivity"

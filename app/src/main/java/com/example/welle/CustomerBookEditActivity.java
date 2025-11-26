@@ -15,22 +15,23 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class CustomerBookDetailActivity extends AppCompatActivity{
+public class CustomerBookEditActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.customer_book_detail);
+        setContentView(R.layout.customer_book_edit);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        Button btn = findViewById(R.id.btnback);
-        Button btn2 = findViewById(R.id.btnclnconfirm);
-        Button btn4 = findViewById(R.id.btncustomernotice);
+        Button btn = findViewById(R.id.btncustomernotice);
+        Button btn2 = findViewById(R.id.btnback);
+        Button btn3 = findViewById(R.id.btnclnconfirm);
+        Button btn4 = findViewById(R.id.btncancel);
         Button popupButton = findViewById(R.id.btncustomerfullmenu);
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +39,7 @@ public class CustomerBookDetailActivity extends AppCompatActivity{
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(CustomerBookDetailActivity.this, CustomerBookActivity.class);
+                Intent intent = new Intent(CustomerBookEditActivity.this, CustomerNoticeActivity.class);
                 startActivity(intent);
             }
         });
@@ -48,26 +49,37 @@ public class CustomerBookDetailActivity extends AppCompatActivity{
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(CustomerBookDetailActivity.this, CustomerConfirmActivity.class);
+                Intent intent = new Intent(CustomerBookEditActivity.this, CustomerNoticeActivity.class);
                 startActivity(intent);
             }
         });
 
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Intent intent = new Intent(CustomerBookEditActivity.this, CustomerConfirmActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(CustomerBookDetailActivity.this, CustomerNoticeActivity.class);
+                Intent intent = new Intent(CustomerBookEditActivity.this, CustomerBookCancelActivity.class);
                 startActivity(intent);
             }
         });
 
+
+
         popupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popup = new PopupMenu(CustomerBookDetailActivity.this, v);
+                PopupMenu popup = new PopupMenu(CustomerBookEditActivity.this, v);
 
                 MenuInflater inflater = popup.getMenuInflater();
 
@@ -76,23 +88,23 @@ public class CustomerBookDetailActivity extends AppCompatActivity{
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         if (item.getItemId() == R.id.customermainch) {
-                            Intent intent = new Intent(CustomerBookDetailActivity.this, CustomerMainActivity.class);
+                            Intent intent = new Intent(CustomerBookEditActivity.this, CustomerMainActivity.class);
                             startActivity(intent);
                         } else if (item.getItemId() == R.id.customerbookch) {
-                            Intent intent = new Intent(CustomerBookDetailActivity.this, CustomerBookActivity.class);
+                            Intent intent = new Intent(CustomerBookEditActivity.this, CustomerBookActivity.class);
                             startActivity(intent);
                         } else if (item.getItemId() == R.id.customermenuch) {
-                            Intent intent = new Intent(CustomerBookDetailActivity.this, CustomerMenuActivity.class);
+                            Intent intent = new Intent(CustomerBookEditActivity.this, CustomerMenuActivity.class);
                             startActivity(intent);
                         } else if (item.getItemId() == R.id.customernoticeuch) {
-                            Intent intent = new Intent(CustomerBookDetailActivity.this, CustomerNoticeActivity.class);
+                            Intent intent = new Intent(CustomerBookEditActivity.this, CustomerNoticeActivity.class);
                             startActivity(intent);
                         } else if (item.getItemId() == R.id.customerpreferencech) {
-                            Toast.makeText(CustomerBookDetailActivity.this, "This function will be coming to you!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CustomerBookEditActivity.this, "This function will be coming to you!", Toast.LENGTH_SHORT).show();
                         } else if (item.getItemId() == R.id.customerhelpch) {
-                            Toast.makeText(CustomerBookDetailActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CustomerBookEditActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
                         } else if (item.getItemId() == R.id.customersignoutch) {
-                            Intent intent = new Intent(CustomerBookDetailActivity.this, MainActivity.class);
+                            Intent intent = new Intent(CustomerBookEditActivity.this, MainActivity.class);
                             startActivity(intent);
                         }
                         return true;
@@ -103,9 +115,5 @@ public class CustomerBookDetailActivity extends AppCompatActivity{
         });
 
 
-
-
     }
-
-
 }
