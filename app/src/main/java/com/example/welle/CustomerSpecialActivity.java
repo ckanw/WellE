@@ -77,7 +77,8 @@ public class CustomerSpecialActivity extends AppCompatActivity {
                             Intent intent = new Intent(CustomerSpecialActivity.this, CustomerNoticeActivity.class);
                             startActivity(intent);
                         } else if (item.getItemId() == R.id.customerpreferencech) {
-                            Toast.makeText(CustomerSpecialActivity.this, "This function will be coming to you!", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(CustomerSpecialActivity.this, CustomerPrefActivity.class);
+                            startActivity(intent);
                         } else if (item.getItemId() == R.id.customerhelpch) {
                             Toast.makeText(CustomerSpecialActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
                         } else if (item.getItemId() == R.id.customersignoutch) {

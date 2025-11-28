@@ -87,7 +87,8 @@ public class CustomerBookCanceledActivity extends AppCompatActivity {
                             Intent intent = new Intent(CustomerBookCanceledActivity.this, CustomerNoticeActivity.class);
                             startActivity(intent);
                         } else if (item.getItemId() == R.id.customerpreferencech) {
-                            Toast.makeText(CustomerBookCanceledActivity.this, "This function will be coming to you!", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(CustomerBookCanceledActivity.this, CustomerPrefActivity.class);
+                            startActivity(intent);
                         } else if (item.getItemId() == R.id.customerhelpch) {
                             Toast.makeText(CustomerBookCanceledActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
                         } else if (item.getItemId() == R.id.customersignoutch) {

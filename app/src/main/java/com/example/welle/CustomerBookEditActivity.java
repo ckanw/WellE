@@ -34,15 +34,55 @@ public class CustomerBookEditActivity extends AppCompatActivity {
         Button btn4 = findViewById(R.id.btncancel);
         Button popupButton = findViewById(R.id.btncustomerfullmenu);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        popupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Explicit Intent
-                //goToSecondActivity();
-                Intent intent = new Intent(CustomerBookEditActivity.this, CustomerNoticeActivity.class);
-                startActivity(intent);
+                PopupMenu popup = new PopupMenu(CustomerBookEditActivity.this, v);
+
+                MenuInflater inflater = popup.getMenuInflater();
+
+                inflater.inflate(R.menu.customermenu, popup.getMenu());
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        if (item.getItemId() == R.id.customermainch) {
+                            Intent intent = new Intent(CustomerBookEditActivity.this, CustomerMainActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.customerbookch) {
+                            Intent intent = new Intent(CustomerBookEditActivity.this, CustomerBookActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.customermenuch) {
+                            Intent intent = new Intent(CustomerBookEditActivity.this, CustomerMenuActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.customernoticeuch) {
+                            Intent intent = new Intent(CustomerBookEditActivity.this, CustomerNoticeActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.customerpreferencech) {
+                            Intent intent = new Intent(CustomerBookEditActivity.this, CustomerPrefActivity.class);
+                            startActivity(intent);
+                        } else if (item.getItemId() == R.id.customerhelpch) {
+                            Toast.makeText(CustomerBookEditActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
+                        } else if (item.getItemId() == R.id.customersignoutch) {
+                            Intent intent = new Intent(CustomerBookEditActivity.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                        return true;
+                    }
+                });
+                popup.show();
             }
         });
+
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+             public void onClick(View v) {
+                 // Explicit Intent
+                //goToSecondActivity();
+                Intent intent = new Intent(CustomerBookEditActivity.this, CustomerNoticeActivity.class);
+                 startActivity(intent);
+              }
+          });
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,43 +116,6 @@ public class CustomerBookEditActivity extends AppCompatActivity {
 
 
 
-        popupButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopupMenu popup = new PopupMenu(CustomerBookEditActivity.this, v);
-
-                MenuInflater inflater = popup.getMenuInflater();
-
-                inflater.inflate(R.menu.customermenu, popup.getMenu());
-                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        if (item.getItemId() == R.id.customermainch) {
-                            Intent intent = new Intent(CustomerBookEditActivity.this, CustomerMainActivity.class);
-                            startActivity(intent);
-                        } else if (item.getItemId() == R.id.customerbookch) {
-                            Intent intent = new Intent(CustomerBookEditActivity.this, CustomerBookActivity.class);
-                            startActivity(intent);
-                        } else if (item.getItemId() == R.id.customermenuch) {
-                            Intent intent = new Intent(CustomerBookEditActivity.this, CustomerMenuActivity.class);
-                            startActivity(intent);
-                        } else if (item.getItemId() == R.id.customernoticeuch) {
-                            Intent intent = new Intent(CustomerBookEditActivity.this, CustomerNoticeActivity.class);
-                            startActivity(intent);
-                        } else if (item.getItemId() == R.id.customerpreferencech) {
-                            Toast.makeText(CustomerBookEditActivity.this, "This function will be coming to you!", Toast.LENGTH_SHORT).show();
-                        } else if (item.getItemId() == R.id.customerhelpch) {
-                            Toast.makeText(CustomerBookEditActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
-                        } else if (item.getItemId() == R.id.customersignoutch) {
-                            Intent intent = new Intent(CustomerBookEditActivity.this, MainActivity.class);
-                            startActivity(intent);
-                        }
-                        return true;
-                    }
-                });
-                popup.show();
-            }
-        });
 
 
     }

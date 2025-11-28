@@ -32,6 +32,7 @@ public class StaffMenuActivity extends AppCompatActivity {
         Button btn = findViewById(R.id.btnback);
         Button btn2 = findViewById(R.id.btnstaffeditmenu);
         Button btn3 = findViewById(R.id.btnstaffnotice);
+        Button btn4 = findViewById(R.id.btnstaffadd);
         Button popupButton = findViewById(R.id.btnstaffullmenu);
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +66,18 @@ public class StaffMenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Intent intent = new Intent(StaffMenuActivity.this, StaffMenuAddActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         popupButton.setOnClickListener(new View.OnClickListener() {
             @Override

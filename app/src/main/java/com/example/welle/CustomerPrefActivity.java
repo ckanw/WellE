@@ -14,51 +14,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class CustomerNoticeActivity extends AppCompatActivity {
-
-    private RecyclerView recyclerView;
-    private ItemAdapter adapter;
-    private List<staffItem> itemList;
+public class CustomerPrefActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.customer_notice);
+        setContentView(R.layout.customer_pref);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        recyclerView = findViewById(R.id.CustomerNoticeRecyclerView);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
-
-        // Initialize data and adapter
-        itemList = new ArrayList<>();
-        loadData();
-        adapter = new ItemAdapter(this, itemList);
-
-        recyclerView.setAdapter(adapter);
-
-
-
-
-
         Button btn = findViewById(R.id.btnback);
-        Button btn2 = findViewById(R.id.button8);
+        Button btn4 = findViewById(R.id.btncustomernotice);
+        Button btn7 = findViewById(R.id.btnconfirm);
+        Button btn8 = findViewById(R.id.btncancel2);
 
         Button popupButton = findViewById(R.id.btncustomerfullmenu);
-
-        // Initialize RecyclerView
-
-
 
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -66,17 +41,42 @@ public class CustomerNoticeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(CustomerNoticeActivity.this, CustomerMainActivity.class);
+                Intent intent = new Intent(CustomerPrefActivity.this, CustomerMainActivity.class);
                 startActivity(intent);
             }
         });
 
-        btn2.setOnClickListener(new View.OnClickListener() {
+
+        btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(CustomerNoticeActivity.this, CustomerBookEditActivity.class);
+                Intent intent = new Intent(CustomerPrefActivity.this, CustomerNoticeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        btn7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Toast.makeText(CustomerPrefActivity.this, "Record is updated!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(CustomerPrefActivity.this, CustomerMainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        btn8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Toast.makeText(CustomerPrefActivity.this, "Record is no change!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(CustomerPrefActivity.this, CustomerMainActivity.class);
                 startActivity(intent);
             }
         });
@@ -84,7 +84,7 @@ public class CustomerNoticeActivity extends AppCompatActivity {
         popupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popup = new PopupMenu(CustomerNoticeActivity.this, v);
+                PopupMenu popup = new PopupMenu(CustomerPrefActivity.this, v);
 
                 MenuInflater inflater = popup.getMenuInflater();
 
@@ -93,24 +93,24 @@ public class CustomerNoticeActivity extends AppCompatActivity {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         if (item.getItemId() == R.id.customermainch) {
-                            Intent intent = new Intent(CustomerNoticeActivity.this, CustomerMainActivity.class);
+                            Intent intent = new Intent(CustomerPrefActivity.this, CustomerMainActivity.class);
                             startActivity(intent);
                         } else if (item.getItemId() == R.id.customerbookch) {
-                            Intent intent = new Intent(CustomerNoticeActivity.this, CustomerBookActivity.class);
+                            Intent intent = new Intent(CustomerPrefActivity.this, CustomerPrefActivity.class);
                             startActivity(intent);
                         } else if (item.getItemId() == R.id.customermenuch) {
-                            Intent intent = new Intent(CustomerNoticeActivity.this, CustomerMenuActivity.class);
+                            Intent intent = new Intent(CustomerPrefActivity.this, CustomerMenuActivity.class);
                             startActivity(intent);
                         } else if (item.getItemId() == R.id.customernoticeuch) {
-                            Intent intent = new Intent(CustomerNoticeActivity.this, CustomerNoticeActivity.class);
+                            Intent intent = new Intent(CustomerPrefActivity.this, CustomerNoticeActivity.class);
                             startActivity(intent);
                         } else if (item.getItemId() == R.id.customerpreferencech) {
-                            Intent intent = new Intent(CustomerNoticeActivity.this, CustomerPrefActivity.class);
+                            Intent intent = new Intent(CustomerPrefActivity.this, CustomerNoticeActivity.class);
                             startActivity(intent);
                         } else if (item.getItemId() == R.id.customerhelpch) {
-                            Toast.makeText(CustomerNoticeActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CustomerPrefActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
                         } else if (item.getItemId() == R.id.customersignoutch) {
-                            Intent intent = new Intent(CustomerNoticeActivity.this, MainActivity.class);
+                            Intent intent = new Intent(CustomerPrefActivity.this, MainActivity.class);
                             startActivity(intent);
                         }
                         return true;
@@ -124,14 +124,15 @@ public class CustomerNoticeActivity extends AppCompatActivity {
 
 
 
+
+
+
+
+
+
+
+
     }
-    private void loadData() {
-        // Sample data for testing
-        itemList.add(new staffItem( "2025-02-14", "Valentine's Day"));
-        itemList.add(new staffItem( "2025-07-14", "Chinese Ghost Festival"));
-        itemList.add(new staffItem( "2025-07-16", "Birthday"));
-        itemList.add(new staffItem( "2025-10-31", "Halloween"));
-        itemList.add(new staffItem( "2025-12-14", "Have a get-together"));
-    }
+
 
 }

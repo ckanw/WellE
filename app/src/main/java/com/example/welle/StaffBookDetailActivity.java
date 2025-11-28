@@ -32,6 +32,7 @@ public class StaffBookDetailActivity extends AppCompatActivity {
         Button btn = findViewById(R.id.btnstaffconfirmbk);
         Button btn2 = findViewById(R.id.btnback);
         Button btn3 = findViewById(R.id.btnstaffnotice);
+        Button btn4 = findViewById(R.id.btncancel);
         Button popupButton = findViewById(R.id.btnstaffullmenu);
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +64,17 @@ public class StaffBookDetailActivity extends AppCompatActivity {
                 // Explicit Intent
                 //goToSecondActivity();
                 Intent intent = new Intent(StaffBookDetailActivity.this, StaffNoticeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Toast.makeText(StaffBookDetailActivity.this, "Record is Canceled!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(StaffBookDetailActivity.this, StaffBookActivity.class);
                 startActivity(intent);
             }
         });

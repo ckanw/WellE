@@ -90,7 +90,8 @@ public class CustomerBookActivity extends AppCompatActivity{
                             Intent intent = new Intent(CustomerBookActivity.this, CustomerNoticeActivity.class);
                             startActivity(intent);
                         } else if (item.getItemId() == R.id.customerpreferencech) {
-                            Toast.makeText(CustomerBookActivity.this, "This function will be coming to you!", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(CustomerBookActivity.this, CustomerPrefActivity.class);
+                            startActivity(intent);
                         } else if (item.getItemId() == R.id.customerhelpch) {
                             Toast.makeText(CustomerBookActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
                         } else if (item.getItemId() == R.id.customersignoutch) {

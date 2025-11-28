@@ -40,15 +40,15 @@
         android:background="#2F2F2F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.158" />
+        app:layout_constraintVertical_bias="0.156" />
 
     <View
         android:id="@+id/view2"
-        android:layout_width="108dp"
-        android:layout_height="105dp"
+        android:layout_width="102dp"
+        android:layout_height="60dp"
         android:background="#666060"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
@@ -59,8 +59,8 @@
 
     <View
         android:id="@+id/view3"
-        android:layout_width="108dp"
-        android:layout_height="105dp"
+        android:layout_width="107dp"
+        android:layout_height="58dp"
         android:background="#666060"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
@@ -69,38 +69,14 @@
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.086" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="105dp"
-        android:layout_height="107dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.115"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.087"
-        app:srcCompat="@drawable/staffmenu" />
-
     <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="97dp"
-        android:layout_height="153dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.554"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/staffcalendar" />
-
     <Button
         android:id="@+id/btnstaffbook"
-        android:layout_width="111dp"
-        android:layout_height="107dp"
+        android:layout_width="105dp"
+        android:layout_height="58dp"
         android:alpha="0"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="@+id/view"
@@ -112,10 +88,11 @@
 
     4
 
+
     <Button
         android:id="@+id/btnstaffallmenu"
-        android:layout_width="105dp"
-        android:layout_height="105dp"
+        android:layout_width="102dp"
+        android:layout_height="55dp"
         android:alpha="0"
         android:text="BtnMeun"
         app:layout_constraintBottom_toBottomOf="@+id/view"
@@ -123,9 +100,7 @@
         app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.095" />
-
-
+        app:layout_constraintVertical_bias="0.082" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -147,6 +122,29 @@
         app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="93dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="MENU"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="109dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="20dp"
+        android:text="BOOKING"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,17 @@
     android:layout_height="match_parent"
     android:animationCache="true"
     android:background="@drawable/jpeg__4_"
-    tools:context=".CustomerLoginActivity">
+    tools:context=".CustomerLoginedActivity">
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="320dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="16dp"
+        android:text="Please wait 10 seconds to resend OTP."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btncustomerresend" />
 
     <TextView
         android:id="@+id/textVersion3"
@@ -51,30 +61,46 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.303" />
 
-    <EditText
-        android:id="@+id/edittxtCukstomerEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="204dp"
-        android:ems="10"
-        android:inputType="text"
-        android:textColor="#D5D5D5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.703"
-        app:layout_constraintStart_toEndOf="@+id/txtOTP"
-        app:layout_constraintTop_toBottomOf="@+id/imageBack" />
-
     <TextView
         android:id="@+id/txtOTP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="216dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="116dp"
         android:text="OTP"
         android:textColor="#D5D5D5"
-        android:textSize="48sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnback" />
+
+    <android.widget.Button
+        android:id="@+id/btncustomerresend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
+        android:background="@drawable/shape_capsule2"
+        android:text="Resend"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toEndOf="@+id/btncustomerok"
+        app:layout_constraintTop_toBottomOf="@+id/txtOTP"
+        app:layout_constraintVertical_bias="0.116" />
+
+    <EditText
+        android:id="@+id/edittxtCukstomerEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="#D5D5D5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/txtOTP"
+        app:layout_constraintTop_toBottomOf="@+id/imageBack" />
 
     <android.widget.Button
         android:id="@+id/btncustomercancel"

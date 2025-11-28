@@ -32,6 +32,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".CustomerLoginedActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".CustomerMainActivity"
             android:exported="false" />
 
@@ -67,6 +71,10 @@
         <activity
             android:name=".CustomerBookCanceledActivity"
             android:exported="false" />
+        <activity
+            android:name=".CustomerPrefActivity"
+            android:exported="false" />
+
 
         <activity
             android:name=".StaffLoginActivity"
@@ -91,6 +99,10 @@
 
         <activity
             android:name=".StaffMenuActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StaffMenuAddActivity"
             android:exported="false" />
 
         <activity
