@@ -28,13 +28,13 @@ public class CustomerBookActivity extends AppCompatActivity{
             return insets;
         });
 
-        Button btn2 = findViewById(R.id.btnback);
+        Button btn = findViewById(R.id.btnback);
         Button btn3 = findViewById(R.id.btntime);
         Button btn4 = findViewById(R.id.btncustomernotice);
         Button popupButton = findViewById(R.id.btncustomerfullmenu);
 
 
-        btn2.setOnClickListener(new View.OnClickListener() {
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Explicit Intent

@@ -52,92 +52,60 @@
         app:layout_constraintVertical_bias="0.303" />
 
     <EditText
-        android:id="@+id/editTextText6"
+        android:id="@+id/edittxtCukstomerEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="204dp"
         android:ems="10"
-
         android:inputType="text"
         android:textColor="#D5D5D5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/txtCustomerPwd"
-        app:layout_constraintTop_toBottomOf="@+id/edittxtCukstomerEmail" />
+        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintStart_toEndOf="@+id/txtOTP"
+        app:layout_constraintTop_toBottomOf="@+id/imageBack" />
 
     <TextView
         android:id="@+id/txtOTP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="128dp"
-        android:text="Email:"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="216dp"
+        android:text="OTP"
         android:textColor="#D5D5D5"
-        android:textSize="24sp"
+        android:textSize="48sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnback" />
-
-    <EditText
-        android:id="@+id/edittxtCukstomerEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:ems="10"
-        android:inputType="text"
-        android:textColor="#D5D5D5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.446"
-        app:layout_constraintStart_toEndOf="@+id/txtOTP"
-        app:layout_constraintTop_toBottomOf="@+id/imageBack" />
-
-    <TextView
-        android:id="@+id/textView37"
-        android:layout_width="320dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="76dp"
-        android:text="Please type your Email and mobile to receive one time password."
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCustomerPwd" />
-
-    <TextView
-        android:id="@+id/txtCustomerPwd"
-        android:layout_width="92dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="20dp"
-        android:text="Mobile:"
-        android:textColor="#D5D5D5"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtOTP" />
-
-    <android.widget.Button
-        android:id="@+id/btncustomerok"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:background="@drawable/shape_capsule2"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:text="OK"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView37" />
 
     <android.widget.Button
         android:id="@+id/btncustomercancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
         android:background="@drawable/shape_capsule2"
+        android:text="Cancel"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toEndOf="@+id/btncustomerok"
-        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+        app:layout_constraintTop_toBottomOf="@+id/txtOTP"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <android.widget.Button
+        android:id="@+id/btncustomerok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="128dp"
+        android:background="@drawable/shape_capsule2"
+        android:text="OK"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOTP"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

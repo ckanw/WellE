@@ -22,8 +22,17 @@
 
     <TextView
         android:id="@+id/content"
-        android:layout_width="303dp"
-        android:layout_height="32dp"
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="+"
+        android:textSize="34sp" />
 </LinearLayout>

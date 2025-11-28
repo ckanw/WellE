@@ -33,18 +33,7 @@
         app:srcCompat="@android:drawable/ic_menu_revert" />
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="62dp"
-        android:layout_height="114dp"
-        android:layout_marginStart="320dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="29dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -80,12 +69,23 @@
         android:id="@+id/btnstaffnotice"
         android:layout_width="83dp"
         android:layout_height="59dp"
+        android:layout_marginTop="4dp"
         android:alpha="0"
-        android:text="btnstaffnotice"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        android:text="btncustomernotice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="96dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        tools:layout_editor_absoluteY="-3dp" />
 
     <ImageView
         android:id="@+id/imageView12"
