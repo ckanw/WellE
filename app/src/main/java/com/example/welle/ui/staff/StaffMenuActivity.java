@@ -1,4 +1,4 @@
-package com.example.welle;
+package com.example.welle.ui.staff;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,90 +15,103 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.welle.R;
+import com.example.welle.StaffMenuAddActivity;
+import com.example.welle.StaffMenuDetailActivity;
+import com.example.welle.StaffNoticeActivity;
 import com.example.welle.ui.MainActivity;
-import com.example.welle.ui.customer.CustomerBookActivity;
-import com.example.welle.ui.customer.CustomerMainActivity;
-import com.example.welle.ui.customer.CustomerPrefActivity;
-import com.example.welle.ui.customer.CustomerNoticeActivity;
 
-public class CustomerBookCancelActivity extends AppCompatActivity {
+public class StaffMenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.customer_cancel);
+        setContentView(R.layout.staff_menu);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        Button btn = findViewById(R.id.btncustomernotice);
-        Button btn2 = findViewById(R.id.btnback);
-        Button btn3 = findViewById(R.id.btnok);
-        Button popupButton = findViewById(R.id.btncustomerfullmenu);
+
+        Button btn = findViewById(R.id.btnback);
+        Button btn2 = findViewById(R.id.btnstaffeditmenu);
+        Button btn3 = findViewById(R.id.btnstaffnotice);
+        Button btn4 = findViewById(R.id.btnstaffadd);
+        Button popupButton = findViewById(R.id.btnstaffullmenu);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(CustomerBookCancelActivity.this, CustomerNoticeActivity.class);
+                Intent intent = new Intent(StaffMenuActivity.this, StaffMainActivity.class);
                 startActivity(intent);
             }
         });
+
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(CustomerBookCancelActivity.this, CustomerNoticeActivity.class);
+                Intent intent = new Intent(StaffMenuActivity.this, StaffMenuDetailActivity.class);
                 startActivity(intent);
             }
         });
+
 
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(CustomerBookCancelActivity.this, CustomerBookCanceledActivity.class);
+                Intent intent = new Intent(StaffMenuActivity.this, StaffNoticeActivity.class);
                 startActivity(intent);
             }
         });
 
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Explicit Intent
+                //goToSecondActivity();
+                Intent intent = new Intent(StaffMenuActivity.this, StaffMenuAddActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         popupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popup = new PopupMenu(CustomerBookCancelActivity.this, v);
+                PopupMenu popup = new PopupMenu(StaffMenuActivity.this, v);
 
                 MenuInflater inflater = popup.getMenuInflater();
 
-                inflater.inflate(R.menu.customermenu, popup.getMenu());
+                inflater.inflate(R.menu.staffmenu, popup.getMenu());
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        if (item.getItemId() == R.id.customermainch) {
-                            Intent intent = new Intent(CustomerBookCancelActivity.this, CustomerMainActivity.class);
+                        if (item.getItemId() == R.id.staffmainch) {
+                            Intent intent = new Intent(StaffMenuActivity.this, StaffMainActivity.class);
                             startActivity(intent);
-                        } else if (item.getItemId() == R.id.customerbookch) {
-                            Intent intent = new Intent(CustomerBookCancelActivity.this, CustomerBookActivity.class);
+                        } else if (item.getItemId() == R.id.staffnoticech) {
+                            Intent intent = new Intent(StaffMenuActivity.this, StaffNoticeActivity.class);
                             startActivity(intent);
-                        } else if (item.getItemId() == R.id.customermenuch) {
-                            Intent intent = new Intent(CustomerBookCancelActivity.this, CustomerMenuActivity.class);
+                        } else if (item.getItemId() == R.id.staffbookch) {
+                            Intent intent = new Intent(StaffMenuActivity.this, StaffBookActivity.class);
                             startActivity(intent);
-                        } else if (item.getItemId() == R.id.customernoticeuch) {
-                            Intent intent = new Intent(CustomerBookCancelActivity.this, CustomerNoticeActivity.class);
+                        } else if (item.getItemId() == R.id.staffmenuch) {
+                            Intent intent = new Intent(StaffMenuActivity.this, StaffMenuActivity.class);
                             startActivity(intent);
-                        } else if (item.getItemId() == R.id.customerpreferencech) {
-                            Intent intent = new Intent(CustomerBookCancelActivity.this, CustomerPrefActivity.class);
-                            startActivity(intent);
-                        } else if (item.getItemId() == R.id.customerhelpch) {
-                            Toast.makeText(CustomerBookCancelActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
-                        } else if (item.getItemId() == R.id.customersignoutch) {
-                            Intent intent = new Intent(CustomerBookCancelActivity.this, MainActivity.class);
+                        } else if (item.getItemId() == R.id.staffhelpch) {
+                            Toast.makeText(StaffMenuActivity.this, "Version v1.0", Toast.LENGTH_SHORT).show();
+                        } else if (item.getItemId() == R.id.staffsignoutch) {
+                            Intent intent = new Intent(StaffMenuActivity.this, MainActivity.class);
                             startActivity(intent);
                         }
                         return true;

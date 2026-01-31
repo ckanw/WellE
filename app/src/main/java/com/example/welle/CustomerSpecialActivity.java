@@ -15,6 +15,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.welle.ui.MainActivity;
+import com.example.welle.ui.customer.CustomerBookActivity;
+import com.example.welle.ui.customer.CustomerMainActivity;
+import com.example.welle.ui.customer.CustomerPrefActivity;
+import com.example.welle.ui.customer.CustomerNoticeActivity;
+
 public class CustomerSpecialActivity extends AppCompatActivity {
 
     @Override
@@ -38,7 +44,7 @@ public class CustomerSpecialActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Explicit Intent
                 //goToSecondActivity();
-                Intent intent = new Intent(CustomerSpecialActivity.this,CustomerMainActivity.class);
+                Intent intent = new Intent(CustomerSpecialActivity.this, CustomerMainActivity.class);
                 startActivity(intent);
             }
         });
